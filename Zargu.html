@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      background: #8B0000; /* Deep gradient red for a luxurious feel */
+      background: linear-gradient(to bottom, #660000, #8B0000); /* Dark cherry gradient */
+      position: relative;
+      animation: backgroundAnimation 8s infinite alternate;
+    }
+
+    h1 {
+      font-size: 4rem;
+      margin: 2rem auto;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+      animation: pulse 1.5s infinite;
+      font-family: 'Cursive', sans-serif;
+    }
+
+    .welcome {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+      font-weight: 500;
+      animation: fadeIn 3s ease-out 0.5s forwards;
+    }
+
+    @keyframes pulse {
+      0% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+      100% {
+        transform: scale(1);
+      }
+    }
+
+    @keyframes backgroundAnimation {
+      0% {
+        background: linear-gradient(to bottom, #660000, #8B0000);
+      }
+      100% {
+        background: linear-gradient(to bottom, #330000, #660000);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
+    }
+
+    .heart {
+      width: 25px;
+      height: 25px;
+      position: absolute;
+      background: radial-gradient(circle, #ff33cc, #ff3399);
+      clip-path: polygon(50% 0%, 100% 25%, 75% 100%, 50% 75%, 25% 100%, 0% 25%);
+      animation: fall 4s linear infinite;
+      opacity: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-60px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+    .section {
+      padding: 2rem;
+      margin-bottom: 2rem;
+      position: relative;
+    }
+
+    .memory-gallery {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .memory {
+      width: 250px;
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      overflow: hidden;
+      border-radius: 10px;
+      transform: scale(1);
+      transition: transform 0.3s ease-out;
+      box-shadow: 0 6px 30px rgba(0, 0, 0, 0.3);
+      animation: bounce 2s infinite ease-out;
+    }
+
+    .memory:hover {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+
+    .gift-reveal {
+      margin: 2rem 0;
+    }
+
+    .hidden-message {
+      display: none;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+      color: #ffeb3b;
+      transition: opacity 1s ease;
+      opacity: 0;
+    }
+
+    button {
+      padding: 0.8rem 1.5rem;
+      background-color: #ff5733;
+      color: white;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+      font-size: 1.2rem;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #c70039;
+      transform: scale(1.05);
+    }
+
+    footer {
+      padding: 1.5rem;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 1.2rem;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="background">
+    <!-- Random hearts will be added dynamically -->
+  </div>
+
+  <header>
+    <h1>Happy Birthday, Hafsu My Love! ❤️</h1>
+    <p class="welcome">Hamesha har din aur pal, apni umar ke saath. This site is all about YOU! ZARGUUU 🎉</p>
+  </header>
+
+  <section class="section memory-section">
+    <h2>My Lifeline, My Blood, My Woman</h2>
+    <div class="memory-gallery">
+      <div class="memory" style="background-image: url('memory2.jpeg');"></div>
+    </div>
+  </section>
+
+  <section class="section gift-reveal">
+    <h2>Why You're so Special to me?</h2>
+    <button onclick="revealMessage()">Open Your Surprise 🎁</button>
+    <div id="hidden-message" class="hidden-message">Mere Dil Ruba 💖 Mere Dil ki Saltanat 👑 Aap py mere dil o jaannnn qurbannnnn 🥺💘 Mere Ankhon ka noor ✨ meray dil ka sukoon 💖 aap ka ye din aesa din h jisme mere Allah ny aap ko iss duniya ma bheja 🌸 jis neemat ka ma jitna shukr krn kam h ❤️💫 aap ki hr ek baat ❤️ hr har ek paaru lafz hr ek chez mere liye bohot maini shuru din se rkhti the or rkhti h or rkhti rhege 💖 aap ki ek muskrahat k liye ma khud ko hazaar baar waar dn💖Aapki muskurahat mere liye sab kuch hai 😊💖, aapki har baat mere dil mein bas gayi hai 😍. Aap ki har ek nazar se mere dil mein ik sukoon ka ehsaas hota hai 🌹, aap ka saath mere liye wallah ek khawab se kam nahi 🤩✨. Jab bhi aapke saath hota hoon, toh zindagi ka har lmha itna khoobsorat or  khaas lagta hai 💕🌈. Har din jo aapke saath guzarta hoon, vo mere liye ek nayi zindagi ka ehsaas hota hai✨💞.
+
+Aap ka har lafz mere liye ek khoobsorat khayal ban kar mere dil mein jaata hai 💖🌟. Main har waqt yeh dua karta hoon ke aap k baba bs jald maan jaien❤️. Aapki Hansti aankhon mein apna future ka baby dekhta hoon . hehe🥺💘. Aap ke saath guzra har lmha mere liye ek qeemti yaad ban jaata hai 📸💭. Aap ka saath paana mere liye sab se bari khushi hoge wallah🥰💖, aur maine zindagi ka asal ma us din se enjoy kiya jab aap mere dil ma aaye 🌹.
+
+Aapka mere liye hona meri zindagi ka sab se bara tohfa hai 🎁💝, aur us tohfe ka shukriya main har roz, har lmha adaa karta hoon 🙏💞. Aap mere dil ka sabse khoobsurat hissa ho, jiske bina mera jeena mushkil hai 😢. Aapke saath ki har ek raahat mere liye ek nayi zindagi ka ehsaas hai 💕.
+
+Har din jo aap mere saath ho, toh uss din mein roshni ka rang bhar jaata hai 🌞🌸. Aap ke saath rahe bina toh zindagi be rang si lagti hai, jaise saari zindagi ek dafa khaali se hojaati h. Aapki muskan hi meri zindgai ki sb se bari waja h🥺💘. Main har roz dua karta hoon ke yeh waqt guzar jaye or bas  hum hmesha k liye saath️ ho jaien❤️. aap mere saath ho toh har mushkil asaan lagti hai 💪💘.
+
+Aap meri zindagi mein wo roshni ho, jo har andhere ko roshan kar de 🌟✨. Aap ka har lafz mere liye ek manmohak melody jaisa hai 🎶💖. Har lamha jo aapke saath guzaroon, uska mujhe bas ek armaan hota hai — ki yeh kabhi khatam na ho 🥺💫. Aap ke saath meri duniya puri ho gayi hai 🙌💖. Har jo aap mujh se kehna chahte ho, mere dil mein bas jaata hai 💓.
+
+Meri dua yeh hai ke humesha aapko woh khushi mile jo aap deserve karte ho, aur aap har waqt muskurate raho 🥳💖. Aapki muskurahat meri duniya ka sub se khoobsurat hissa hai 🌞💖. Mere dil ki har baat aap ke liye hai, aur yeh baat kabhi badalne wali nahi 💌. Zindagi ki har subah aapke saath ho toh har roz ek pyara sa surprise dena chahn ga🥰🎁. Main Allah se yeh dua karta hoon ke har din aap ke saath ho 💓🙏.
+
+Dil se chahne wali baat yeh hai ke aap humesha mere saath rahen, kyunki aapka saath mere jeene ki wajah hai 💖💞. Jahan jahan bhi main jaoon, aap mere dil mein hote ho 🥰💌. Aapki har muskaan mere dil mein bas jaati hai, aur woh mere jeene ki wajah banti hai 🥺💘💕😊💝
+💝</div>
+  </section>
+
+
+  <script>
+    function createHearts() {
+      const background = document.querySelector('.background');
+      for (let i = 0; i < 50; i++) {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = `${Math.random() * 100}%`;
+        heart.style.animationDuration = `${2 + Math.random() * 3}s`;
+        heart.style.animationDelay = `${Math.random() * 2}s`;
+        background.appendChild(heart);
+      }
+    }
+
+    function revealMessage() {
+      const message = document.getElementById('hidden-message');
+      message.style.display = 'block';
+      message.style.opacity = '1';
+    }
+
+    createHearts();
+  </script>
+</body>
+</html>
